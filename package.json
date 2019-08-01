@@ -1,6 +1,6 @@
 {
   "name": "git-create-repos-labels",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A tiny helper to create of label in the github repository",
   "main": "index.js",
   "scripts": {
