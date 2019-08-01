@@ -27,6 +27,12 @@ gitCreateReposLables({
 > :warning: description is not currently set
 
 ## API
+#### `label`
+
+Type: `object` **`Required`**  
+Default: `undefined`  
+Description: *label creation options `{name: string, color: string, description: string}`* when `{name, color}` are required
+
 #### `owner`
 
 Type: `String` **`Required`**  
