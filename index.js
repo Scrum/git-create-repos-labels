@@ -51,13 +51,6 @@ exports["default"] = (function (_a) {
                             body: { name: name, color: color, description: description }
                         })];
                 case 1:
-                    _b.sent();
-                    return [4 /*yield*/, ghGot.patch("repos/" + owner + "/" + repo + "/labels/" + name, {
-                            json: true,
-                            token: token,
-                            body: { name: name, color: color, description: description }
-                        })];
-                case 2:
                     body = (_b.sent()).body;
                     return [2 /*return*/, body];
             }
