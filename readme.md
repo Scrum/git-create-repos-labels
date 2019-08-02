@@ -24,7 +24,6 @@ gitCreateReposLables({
 });
 //=> {id: 1479855803, node_id: 'MDU6TGFiZWwxNDc5ODU1ODAz', url: 'https://api.github.com/repos/post/post-slims/labels/bug', name: 'bug', color: 'd73a4a', default: true}
 ```
-> :warning: description is not currently set
 
 ## API
 #### `label`
