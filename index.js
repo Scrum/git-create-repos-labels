@@ -47,6 +47,9 @@ exports["default"] = (function (_a) {
                     name = label.name, color = label.color, description = label.description;
                     return [4 /*yield*/, ghGot.post("repos/" + owner + "/" + repo + "/labels", {
                             json: true,
+                            headers: {
+                                'accept': 'application/vnd.github.symmetra-preview+json'
+                            },
                             token: token,
                             body: { name: name, color: color, description: description }
                         })];
