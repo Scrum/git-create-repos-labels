@@ -22,7 +22,7 @@ gitCreateReposLables({
   repo: 'slims', 
   token: '59bd8d5eb1980b7f926f2d106f4f2f0312fdf97f'
 });
-//=> {id: 1479855803, node_id: 'MDU6TGFiZWwxNDc5ODU1ODAz', url: 'https://api.github.com/repos/post/post-slims/labels/bug', name: 'bug', color: 'd73a4a', default: true}
+//=> {id: 1479855803, node_id: 'MDU6TGFiZWwxNDc5ODU1ODAz', url: 'https://api.github.com/repos/post/post-slims/labels/bug', name: 'bug', color: 'd73a4a', description: 'Something isn\'t working', default: true}
 ```
 
 ## API
@@ -30,7 +30,7 @@ gitCreateReposLables({
 
 Type: `object` **`Required`**  
 Default: `undefined`  
-Description: *label creation options `{name: string, color: string, description: string}`* when `{name, color}` are required
+Description: *label creation options `{name: string, color: string, description: string}` when `{name, color}` are required*
 
 #### `owner`
 
