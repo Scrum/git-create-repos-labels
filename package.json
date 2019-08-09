@@ -16,7 +16,7 @@
   "author": "scrum",
   "license": "MIT",
   "dependencies": {
-    "gh-got": "^8.1.0"
+    "graphql-got": "^0.1.2"
   },
   "devDependencies": {
     "ava": "^2.2.0",
