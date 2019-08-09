@@ -1,3 +1,3 @@
 import { options } from './interface';
-declare const _default: ({ label, owner, repo, token }: options) => Promise<object>;
+declare const _default: ({ label: { color, name, description }, repoId, token }: options) => any;
 export default _default;

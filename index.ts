@@ -1,16 +1,19 @@
-import ghGot = require('gh-got');
-import { options, label } from './interface';
+import graphqlGot = require('graphql-got');
+import { options } from './interface';
 
-export default async ({label, owner, repo, token}: options): Promise<object> => {
-  const {name, color, description}: label = label;
-  const {body} =  await ghGot.post(`repos/${owner}/${repo}/labels`, {
-    json: true,
+export default ({label: {color, name, description}, repoId, token}: options) => {
+  return graphqlGot('https://api.github.com/graphql', {
+    query: `mutation {
+      createLabel(input: {color: "${color}", name: "${name}", description: "${description}", repositoryId: "${repoId}"}) {
+        label {
+          id
+          url
+        }
+      }
+    }`, 
     headers: {
-      'accept': 'application/vnd.github.symmetra-preview+json'
+      'accept': 'application/vnd.github.bane-preview+json'
     },
-    token,
-    body: {name, color, description}
-  });
-
-  return body;
+    token
+  }).then(({response: {body: {createLabel: {label}}}}) => label);
 }
