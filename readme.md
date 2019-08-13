@@ -27,11 +27,11 @@ Type: `object` **`Required`**
 Default: `undefined`  
 Description: *label creation options `{name: string, color: string, description: string}` when `{name, color}` are required*
 
-#### `owner`
+#### `repoId`
 
 Type: `String` **`Required`**  
 Default: `undefined`  
-Description: *Github owner or organization name.*
+Description: *Repository identificator in Github.*
 
 #### `repo`
 
@@ -44,3 +44,6 @@ Description: *Repository name.*
 Type: `String` **`Required`**  
 Default: `undefined`  
 Description: *You  Github Personal Token. Grab it from your [Developer settings](https://github.com/settings/developers)*
+
+## Recommend
+ - [git-get-repos-id](https://github.com/Scrum/git-get-repos-id) -  A tiny helper to get github repository `id` 
