@@ -12,17 +12,12 @@ npm install git-create-repos-labels
 ```js
 import gitCreateReposLables from 'git-create-repos-labels';
 
-gitCreateReposLables({
-  label: {
-    name: 'bug',
-    color: 'd73a4a',
-    description: 'Something isn\'t working'
-  },
-  owner: 'scrum', 
-  repo: 'slims', 
-  token: '59bd8d5eb1980b7f926f2d106f4f2f0312fdf97f'
-});
-//=> {id: 1479855803, node_id: 'MDU6TGFiZWwxNDc5ODU1ODAz', url: 'https://api.github.com/repos/post/post-slims/labels/bug', name: 'bug', color: 'd73a4a', description: 'Something isn\'t working', default: true}
+const repoId = 'MDEwOlJlcG9zaXRvcnkxOTc3MjY4NTY=';
+const token = '00a82e375c76ef7099c615677b7a97d0024d2465';
+const label = {color: 'ff0000', name: 'test', description: 'test description'};
+
+gitCreateReposLables({label, repoId, token});
+//=> {id: 1479855803, node_id: 'MDU6TGFiZWwxNDc5ODU1ODAz', url: 'https://api.github.com/repos/post/post-static/labels/test', name: 'test', color: 'ff0000', description: 'test description', default: true}
 ```
 
 ## API
@@ -32,11 +27,11 @@ Type: `object` **`Required`**
 Default: `undefined`  
 Description: *label creation options `{name: string, color: string, description: string}` when `{name, color}` are required*
 
-#### `owner`
+#### `repoId`
 
 Type: `String` **`Required`**  
 Default: `undefined`  
-Description: *Github owner or organization name.*
+Description: *Repository identificator in Github.*
 
 #### `repo`
 
@@ -49,3 +44,6 @@ Description: *Repository name.*
 Type: `String` **`Required`**  
 Default: `undefined`  
 Description: *You  Github Personal Token. Grab it from your [Developer settings](https://github.com/settings/developers)*
+
+## Recommend
+ - [git-get-repos-id](https://github.com/Scrum/git-get-repos-id) -  A tiny helper to get github repository `id` 
