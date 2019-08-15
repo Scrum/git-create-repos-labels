@@ -15,5 +15,5 @@ export default ({label: {color, name, description}, repoId, token}: options) => 
       'accept': 'application/vnd.github.bane-preview+json'
     },
     token
-  }).then(({response: {body: {createLabel: {label}}}}) => label);
+  }).then(({body: {createLabel: {label}}}) => label);
 }
