@@ -10,7 +10,7 @@ exports["default"] = (function (_a) {
         },
         token: token
     }).then(function (_a) {
-        var label = _a.response.body.createLabel.label;
+        var label = _a.body.createLabel.label;
         return label;
     });
 });

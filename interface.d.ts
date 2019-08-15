@@ -4,6 +4,7 @@ export interface options {
     token: string;
 }
 export interface label {
+    id: string;
     name: string;
     color: string;
     description?: string;
